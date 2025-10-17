@@ -1,0 +1,45 @@
+Raw Data Cleaning
+
+Inputs
+-> raw database
+
+1. ปรับข้อมูลปีให้เป็นเลขเต็ม 68 -> 2568
+2. ทำข้อมูล text ให้เป็น code numeric (เช่น ภาค จังหวัด) เพื่อความเร็วในการวิเคราะห์ข้อมูลขนาดใหญ่
+3. Filter แต่ข้อมูลที่จะต้องใช้
+
+Outputs
+-> database ที่ cleaned
+-> data dict ของตัวแปรที่เราตั้งเอง
+
+-------------------------------------------------------------------
+
+Data Summary
+
+Inputs
+1. Frequency
+2. group of statistics -> โครงสร้างแรงงาน, กำลังแรงงาน, etc.
+3. list of statistics: list ต้องเปลี่ยนไปตาม group of statistics ['employed', 'unemployed', 'unemployment rate', 'wage']
+4. group_by: ['Province', 'TSIC_2', 'gender']
+
+1. Import Data: frequency (Q, H, Y)
+2. Classify: employment status, educational level, age range, TSIC category
+3. Summary Stat
+	- โครงสร้างแรงงาน: labor force, employed, unemployed
+	- โครงสร้างกำลังแรงงาน: labor force by age, by educational level
+	- โครงสร้างผู้มีงานทำ: employed by age, educational level, ...
+	- โครงสร้างผู้ว่างงาน
+	- ตลาดแรงงาน
+	- ค่าจ้างแรงงาน
+	- แรงงานต่างด้าว
+	- แรงงานไทยไปทำงาน ตปท.
+
+Outputs
+1. Dictionaries of classification
+2. summary stats
+3. summary stats by group
+
+-------------------------------------------------------------------
+
+(ไว้ก่อน) Visualization: ตามหัวข้อของ Summary Stat
+
+-------------------------------------------------------------------
